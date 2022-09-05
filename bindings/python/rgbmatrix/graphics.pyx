@@ -46,8 +46,8 @@ def DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
 def DrawCircle(core.Canvas c, int x, int y, int r, Color color):
     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
 
-def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):
-    cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color)
+def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color, int side):
+    cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color, side)
 
 # Local Variables:
 # mode: python

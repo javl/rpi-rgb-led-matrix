@@ -298,7 +298,7 @@ void draw_circle(struct LedCanvas *c, int xx, int y, int radius, uint8_t r, uint
 }
 
 // Draw a line from "x0", "y0" to "x1", "y1" and with "color"
-void draw_line(struct LedCanvas *c, int x0, int y0, int x1, int y1, uint8_t r, uint8_t g, uint8_t b) {
+void draw_line(struct LedCanvas *c, int x0, int y0, int x1, int y1, uint8_t r, uint8_t g, uint8_t b, int side) {
   const rgb_matrix::Color col = rgb_matrix::Color(r, g, b);
-  DrawLine(to_canvas(c), x0, y0, x1, y1, col);
+  DrawLine(to_canvas(c), x0, y0, x1, y1, col, side);
 }

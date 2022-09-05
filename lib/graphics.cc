@@ -140,7 +140,7 @@ void DrawCircle(Canvas *c, int x0, int y0, int radius, const Color &color) {
   }
 }
 
-void DrawLine(Canvas *c, int x0, int y0, int x1, int y1, const Color &color) {
+void DrawLine(Canvas *c, int x0, int y0, int x1, int y1, const Color &color, int side) {
   int dy = y1 - y0, dx = x1 - x0, gradient, x, y, shift = 0x10;
 
   if (abs(dx) > abs(dy)) {
@@ -149,9 +149,21 @@ void DrawLine(Canvas *c, int x0, int y0, int x1, int y1, const Color &color) {
       std::swap(x0, x1);
       std::swap(y0, y1);
     }
+    if (side == 1 && x0 > 32) {
+      return;
+    }
+    if (side == 2 && x1 < 32) {
+      return;
+    }
     gradient = (dy << shift) / dx ;
 
     for (x = x0 , y = 0x8000 + (y0 << shift); x <= x1; ++x, y += gradient) {
+      if (side == 1 && x > 32) {
+        return;
+      }
+      if (side == 2 && x < 32) {
+        continue;
+      }
       c->SetPixel(x, y >> shift, color.r, color.g, color.b);
     }
   } else if (dy != 0) {
@@ -162,6 +174,13 @@ void DrawLine(Canvas *c, int x0, int y0, int x1, int y1, const Color &color) {
     }
     gradient = (dx << shift) / dy;
     for (y = y0 , x = 0x8000 + (x0 << shift); y <= y1; ++y, x += gradient) {
+      if (side == 1 && x >> shift > 32) {
+        return;
+      }
+      if (side == 2 && x >> shift < 32) {
+        continue;
+      }
+
       c->SetPixel(x >> shift, y, color.r, color.g, color.b);
     }
   } else {

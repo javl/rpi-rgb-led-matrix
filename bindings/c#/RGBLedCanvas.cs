@@ -26,10 +26,10 @@ namespace rpi_rgb_led_matrix_sharp
         internal static extern void draw_circle(IntPtr canvas, int xx, int y, int radius, byte r, byte g, byte b);
 
         [DllImport("librgbmatrix.so")]
-        internal static extern void draw_line(IntPtr canvas, int x0, int y0, int x1, int y1, byte r, byte g, byte b);
+        internal static extern void draw_line(IntPtr canvas, int x0, int y0, int x1, int y1, byte r, byte g, byte b, int side);
         #endregion
 
-        // This is a wrapper for canvas no need to implement IDisposable here 
+        // This is a wrapper for canvas no need to implement IDisposable here
         // because RGBLedMatrix has ownership and takes care of disposing canvases
         internal IntPtr _canvas;
 
@@ -68,9 +68,9 @@ namespace rpi_rgb_led_matrix_sharp
             draw_circle(_canvas, x0, y0, radius, color.R, color.G, color.B);
         }
 
-        public void DrawLine (int x0, int y0, int x1, int y1, Color color)
+        public void DrawLine (int x0, int y0, int x1, int y1, Color color, int side)
         {
-            draw_line(_canvas, x0, y0, x1, y1, color.R, color.G, color.B);
+            draw_line(_canvas, x0, y0, x1, y1, color.R, color.G, color.B, side);
         }
 
         public int DrawText(RGBLedFont font, int x, int y, Color color, string text, int spacing=0, bool vertical=false)

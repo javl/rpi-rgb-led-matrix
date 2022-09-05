@@ -14,7 +14,7 @@ class GraphicsTest(SampleBase):
         font.LoadFont("../../../fonts/7x13.bdf")
 
         red = graphics.Color(255, 0, 0)
-        graphics.DrawLine(canvas, 5, 5, 22, 13, red)
+        graphics.DrawLine(canvas, 5, 5, 22, 13, red, 0)
 
         green = graphics.Color(0, 255, 0)
         graphics.DrawCircle(canvas, 15, 15, 10, green)

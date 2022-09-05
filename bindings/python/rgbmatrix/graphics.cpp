@@ -939,10 +939,10 @@ struct __pyx_obj_9rgbmatrix_8graphics_Font;
 
 /* "core.pxd":3
  * cimport cppinc
- * 
+ *
  * cdef class Canvas:             # <<<<<<<<<<<<<<
  *     cdef cppinc.Canvas *__getCanvas(self) except +
- * 
+ *
  */
 struct __pyx_obj_9rgbmatrix_4core_Canvas {
   PyObject_HEAD
@@ -952,10 +952,10 @@ struct __pyx_obj_9rgbmatrix_4core_Canvas {
 
 /* "core.pxd":6
  *     cdef cppinc.Canvas *__getCanvas(self) except +
- * 
+ *
  * cdef class FrameCanvas(Canvas):             # <<<<<<<<<<<<<<
  *     cdef cppinc.FrameCanvas *__canvas
- * 
+ *
  */
 struct __pyx_obj_9rgbmatrix_4core_FrameCanvas {
   struct __pyx_obj_9rgbmatrix_4core_Canvas __pyx_base;
@@ -965,10 +965,10 @@ struct __pyx_obj_9rgbmatrix_4core_FrameCanvas {
 
 /* "core.pxd":9
  *     cdef cppinc.FrameCanvas *__canvas
- * 
+ *
  * cdef class RGBMatrix(Canvas):             # <<<<<<<<<<<<<<
  *     cdef cppinc.RGBMatrix *__matrix
- * 
+ *
  */
 struct __pyx_obj_9rgbmatrix_4core_RGBMatrix {
   struct __pyx_obj_9rgbmatrix_4core_Canvas __pyx_base;
@@ -978,7 +978,7 @@ struct __pyx_obj_9rgbmatrix_4core_RGBMatrix {
 
 /* "core.pxd":12
  *     cdef cppinc.RGBMatrix *__matrix
- * 
+ *
  * cdef class RGBMatrixOptions:             # <<<<<<<<<<<<<<
  *     cdef cppinc.Options __options
  *     cdef cppinc.RuntimeOptions __runtime_options
@@ -996,10 +996,10 @@ struct __pyx_obj_9rgbmatrix_4core_RGBMatrixOptions {
 
 /* "rgbmatrix/graphics.pxd":3
  * cimport cppinc
- * 
+ *
  * cdef class Color:             # <<<<<<<<<<<<<<
  *     cdef cppinc.Color __color
- * 
+ *
  */
 struct __pyx_obj_9rgbmatrix_8graphics_Color {
   PyObject_HEAD
@@ -1009,10 +1009,10 @@ struct __pyx_obj_9rgbmatrix_8graphics_Color {
 
 /* "rgbmatrix/graphics.pxd":6
  *     cdef cppinc.Color __color
- * 
+ *
  * cdef class Font:             # <<<<<<<<<<<<<<
  *     cdef cppinc.Font __font
- * 
+ *
  */
 struct __pyx_obj_9rgbmatrix_8graphics_Font {
   PyObject_HEAD
@@ -1023,10 +1023,10 @@ struct __pyx_obj_9rgbmatrix_8graphics_Font {
 
 /* "core.pxd":3
  * cimport cppinc
- * 
+ *
  * cdef class Canvas:             # <<<<<<<<<<<<<<
  *     cdef cppinc.Canvas *__getCanvas(self) except +
- * 
+ *
  */
 
 struct __pyx_vtabstruct_9rgbmatrix_4core_Canvas {
@@ -1037,10 +1037,10 @@ static struct __pyx_vtabstruct_9rgbmatrix_4core_Canvas *__pyx_vtabptr_9rgbmatrix
 
 /* "core.pxd":6
  *     cdef cppinc.Canvas *__getCanvas(self) except +
- * 
+ *
  * cdef class FrameCanvas(Canvas):             # <<<<<<<<<<<<<<
  *     cdef cppinc.FrameCanvas *__canvas
- * 
+ *
  */
 
 struct __pyx_vtabstruct_9rgbmatrix_4core_FrameCanvas {
@@ -1051,10 +1051,10 @@ static struct __pyx_vtabstruct_9rgbmatrix_4core_FrameCanvas *__pyx_vtabptr_9rgbm
 
 /* "core.pxd":9
  *     cdef cppinc.FrameCanvas *__canvas
- * 
+ *
  * cdef class RGBMatrix(Canvas):             # <<<<<<<<<<<<<<
  *     cdef cppinc.RGBMatrix *__matrix
- * 
+ *
  */
 
 struct __pyx_vtabstruct_9rgbmatrix_4core_RGBMatrix {
@@ -1567,7 +1567,7 @@ static PyObject *__pyx_codeobj__10;
 /* Late includes */
 
 /* "rgbmatrix/graphics.pyx":9
- * 
+ *
  * cdef class Color:
  *     def __init__(self, uint8_t red = 0, uint8_t green = 0, uint8_t blue = 0):             # <<<<<<<<<<<<<<
  *         self.__color.r = red
@@ -1687,7 +1687,7 @@ static int __pyx_pf_9rgbmatrix_8graphics_5Color___init__(struct __pyx_obj_9rgbma
  *         self.__color.r = red
  *         self.__color.g = green             # <<<<<<<<<<<<<<
  *         self.__color.b = blue
- * 
+ *
  */
   __pyx_v_self->__pyx___color.g = __pyx_v_green;
 
@@ -1695,13 +1695,13 @@ static int __pyx_pf_9rgbmatrix_8graphics_5Color___init__(struct __pyx_obj_9rgbma
  *         self.__color.r = red
  *         self.__color.g = green
  *         self.__color.b = blue             # <<<<<<<<<<<<<<
- * 
+ *
  *     property red:
  */
   __pyx_v_self->__pyx___color.b = __pyx_v_blue;
 
   /* "rgbmatrix/graphics.pyx":9
- * 
+ *
  * cdef class Color:
  *     def __init__(self, uint8_t red = 0, uint8_t green = 0, uint8_t blue = 0):             # <<<<<<<<<<<<<<
  *         self.__color.r = red
@@ -1715,11 +1715,11 @@ static int __pyx_pf_9rgbmatrix_8graphics_5Color___init__(struct __pyx_obj_9rgbma
 }
 
 /* "rgbmatrix/graphics.pyx":15
- * 
+ *
  *     property red:
  *         def __get__(self): return self.__color.r             # <<<<<<<<<<<<<<
  *         def __set__(self, uint8_t value): self.__color.r = value
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1765,7 +1765,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_5Color_3red___get__(struct __pyx_
  *     property red:
  *         def __get__(self): return self.__color.r
  *         def __set__(self, uint8_t value): self.__color.r = value             # <<<<<<<<<<<<<<
- * 
+ *
  *     property green:
  */
 
@@ -1808,11 +1808,11 @@ static int __pyx_pf_9rgbmatrix_8graphics_5Color_3red_2__set__(struct __pyx_obj_9
 }
 
 /* "rgbmatrix/graphics.pyx":19
- * 
+ *
  *     property green:
  *         def __get__(self): return self.__color.g             # <<<<<<<<<<<<<<
  *         def __set__(self, uint8_t value): self.__color.g = value
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1858,7 +1858,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_5Color_5green___get__(struct __py
  *     property green:
  *         def __get__(self): return self.__color.g
  *         def __set__(self, uint8_t value): self.__color.g = value             # <<<<<<<<<<<<<<
- * 
+ *
  *     property blue:
  */
 
@@ -1901,11 +1901,11 @@ static int __pyx_pf_9rgbmatrix_8graphics_5Color_5green_2__set__(struct __pyx_obj
 }
 
 /* "rgbmatrix/graphics.pyx":23
- * 
+ *
  *     property blue:
  *         def __get__(self): return self.__color.b             # <<<<<<<<<<<<<<
  *         def __set__(self, uint8_t value): self.__color.b = value
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1951,7 +1951,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_5Color_4blue___get__(struct __pyx
  *     property blue:
  *         def __get__(self): return self.__color.b
  *         def __set__(self, uint8_t value): self.__color.b = value             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef class Font:
  */
 
@@ -2107,11 +2107,11 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_5Color_4__setstate_cython__(CYTHO
 }
 
 /* "rgbmatrix/graphics.pyx":27
- * 
+ *
  * cdef class Font:
  *     def CharacterWidth(self, uint32_t char):             # <<<<<<<<<<<<<<
  *         return self.__font.CharacterWidth(char)
- * 
+ *
  */
 
 /* Python wrapper */
@@ -2153,7 +2153,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_CharacterWidth(struct __pyx
  * cdef class Font:
  *     def CharacterWidth(self, uint32_t char):
  *         return self.__font.CharacterWidth(char)             # <<<<<<<<<<<<<<
- * 
+ *
  *     def LoadFont(self, file):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2164,11 +2164,11 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_CharacterWidth(struct __pyx
   goto __pyx_L0;
 
   /* "rgbmatrix/graphics.pyx":27
- * 
+ *
  * cdef class Font:
  *     def CharacterWidth(self, uint32_t char):             # <<<<<<<<<<<<<<
  *         return self.__font.CharacterWidth(char)
- * 
+ *
  */
 
   /* function exit code */
@@ -2184,7 +2184,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_CharacterWidth(struct __pyx
 
 /* "rgbmatrix/graphics.pyx":30
  *         return self.__font.CharacterWidth(char)
- * 
+ *
  *     def LoadFont(self, file):             # <<<<<<<<<<<<<<
  *         if (not self.__font.LoadFont(file.encode('utf-8'))):
  *             raise Exception("Couldn't load font " + file)
@@ -2217,11 +2217,11 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_2LoadFont(struct __pyx_obj_
   __Pyx_RefNannySetupContext("LoadFont", 0);
 
   /* "rgbmatrix/graphics.pyx":31
- * 
+ *
  *     def LoadFont(self, file):
  *         if (not self.__font.LoadFont(file.encode('utf-8'))):             # <<<<<<<<<<<<<<
  *             raise Exception("Couldn't load font " + file)
- * 
+ *
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_file, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -2249,7 +2249,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_2LoadFont(struct __pyx_obj_
  *     def LoadFont(self, file):
  *         if (not self.__font.LoadFont(file.encode('utf-8'))):
  *             raise Exception("Couldn't load font " + file)             # <<<<<<<<<<<<<<
- * 
+ *
  *     def DrawGlyph(self, core.Canvas c, int x, int y, Color color, uint32_t char):
  */
     __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Couldn_t_load_font, __pyx_v_file); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 32, __pyx_L1_error)
@@ -2262,17 +2262,17 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_2LoadFont(struct __pyx_obj_
     __PYX_ERR(1, 32, __pyx_L1_error)
 
     /* "rgbmatrix/graphics.pyx":31
- * 
+ *
  *     def LoadFont(self, file):
  *         if (not self.__font.LoadFont(file.encode('utf-8'))):             # <<<<<<<<<<<<<<
  *             raise Exception("Couldn't load font " + file)
- * 
+ *
  */
   }
 
   /* "rgbmatrix/graphics.pyx":30
  *         return self.__font.CharacterWidth(char)
- * 
+ *
  *     def LoadFont(self, file):             # <<<<<<<<<<<<<<
  *         if (not self.__font.LoadFont(file.encode('utf-8'))):
  *             raise Exception("Couldn't load font " + file)
@@ -2295,10 +2295,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_2LoadFont(struct __pyx_obj_
 
 /* "rgbmatrix/graphics.pyx":34
  *             raise Exception("Couldn't load font " + file)
- * 
+ *
  *     def DrawGlyph(self, core.Canvas c, int x, int y, Color color, uint32_t char):             # <<<<<<<<<<<<<<
  *         return self.__font.DrawGlyph(c.__getCanvas(), x, y, color.__color, char)
- * 
+ *
  */
 
 /* Python wrapper */
@@ -2415,10 +2415,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_4DrawGlyph(struct __pyx_obj
   __Pyx_RefNannySetupContext("DrawGlyph", 0);
 
   /* "rgbmatrix/graphics.pyx":35
- * 
+ *
  *     def DrawGlyph(self, core.Canvas c, int x, int y, Color color, uint32_t char):
  *         return self.__font.DrawGlyph(c.__getCanvas(), x, y, color.__color, char)             # <<<<<<<<<<<<<<
- * 
+ *
  *     property height:
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2436,10 +2436,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_4DrawGlyph(struct __pyx_obj
 
   /* "rgbmatrix/graphics.pyx":34
  *             raise Exception("Couldn't load font " + file)
- * 
+ *
  *     def DrawGlyph(self, core.Canvas c, int x, int y, Color color, uint32_t char):             # <<<<<<<<<<<<<<
  *         return self.__font.DrawGlyph(c.__getCanvas(), x, y, color.__color, char)
- * 
+ *
  */
 
   /* function exit code */
@@ -2454,10 +2454,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_4DrawGlyph(struct __pyx_obj
 }
 
 /* "rgbmatrix/graphics.pyx":38
- * 
+ *
  *     property height:
  *         def __get__(self): return self.__font.height()             # <<<<<<<<<<<<<<
- * 
+ *
  *     property baseline:
  */
 
@@ -2501,10 +2501,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_6height___get__(struct __py
 }
 
 /* "rgbmatrix/graphics.pyx":41
- * 
+ *
  *     property baseline:
  *         def __get__(self): return self.__font.baseline()             # <<<<<<<<<<<<<<
- * 
+ *
  * def DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
  */
 
@@ -2662,10 +2662,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_8__setstate_cython__(CYTHON
 
 /* "rgbmatrix/graphics.pyx":43
  *         def __get__(self): return self.__font.baseline()
- * 
+ *
  * def DrawText(core.Canvas c, Font f, int x, int y, Color color, text):             # <<<<<<<<<<<<<<
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))
- * 
+ *
  */
 
 /* Python wrapper */
@@ -2798,10 +2798,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_DrawText(CYTHON_UNUSED PyObject *
   __Pyx_RefNannySetupContext("DrawText", 0);
 
   /* "rgbmatrix/graphics.pyx":44
- * 
+ *
  * def DrawText(core.Canvas c, Font f, int x, int y, Color color, text):
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))             # <<<<<<<<<<<<<<
- * 
+ *
  * def DrawCircle(core.Canvas c, int x, int y, int r, Color color):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2838,10 +2838,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_DrawText(CYTHON_UNUSED PyObject *
 
   /* "rgbmatrix/graphics.pyx":43
  *         def __get__(self): return self.__font.baseline()
- * 
+ *
  * def DrawText(core.Canvas c, Font f, int x, int y, Color color, text):             # <<<<<<<<<<<<<<
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))
- * 
+ *
  */
 
   /* function exit code */
@@ -2859,10 +2859,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_DrawText(CYTHON_UNUSED PyObject *
 
 /* "rgbmatrix/graphics.pyx":46
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))
- * 
+ *
  * def DrawCircle(core.Canvas c, int x, int y, int r, Color color):             # <<<<<<<<<<<<<<
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
- * 
+ *
  */
 
 /* Python wrapper */
@@ -2979,10 +2979,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_2DrawCircle(CYTHON_UNUSED PyObjec
   __Pyx_RefNannySetupContext("DrawCircle", 0);
 
   /* "rgbmatrix/graphics.pyx":47
- * 
+ *
  * def DrawCircle(core.Canvas c, int x, int y, int r, Color color):
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)             # <<<<<<<<<<<<<<
- * 
+ *
  * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):
  */
   try {
@@ -2995,10 +2995,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_2DrawCircle(CYTHON_UNUSED PyObjec
 
   /* "rgbmatrix/graphics.pyx":46
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))
- * 
+ *
  * def DrawCircle(core.Canvas c, int x, int y, int r, Color color):             # <<<<<<<<<<<<<<
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
- * 
+ *
  */
 
   /* function exit code */
@@ -3015,10 +3015,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_2DrawCircle(CYTHON_UNUSED PyObjec
 
 /* "rgbmatrix/graphics.pyx":49
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
- * 
+ *
  * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):             # <<<<<<<<<<<<<<
  *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color)
- * 
+ *
  */
 
 /* Python wrapper */
@@ -3146,10 +3146,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4DrawLine(CYTHON_UNUSED PyObject 
   __Pyx_RefNannySetupContext("DrawLine", 0);
 
   /* "rgbmatrix/graphics.pyx":50
- * 
+ *
  * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):
  *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color)             # <<<<<<<<<<<<<<
- * 
+ *
  * # Local Variables:
  */
   try {
@@ -3162,10 +3162,10 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4DrawLine(CYTHON_UNUSED PyObject 
 
   /* "rgbmatrix/graphics.pyx":49
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
- * 
+ *
  * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):             # <<<<<<<<<<<<<<
  *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color)
- * 
+ *
  */
 
   /* function exit code */
@@ -3585,10 +3585,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "rgbmatrix/graphics.pyx":43
  *         def __get__(self): return self.__font.baseline()
- * 
+ *
  * def DrawText(core.Canvas c, Font f, int x, int y, Color color, text):             # <<<<<<<<<<<<<<
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))
- * 
+ *
  */
   __pyx_tuple__5 = PyTuple_Pack(6, __pyx_n_s_c, __pyx_n_s_f, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_color, __pyx_n_s_text); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(1, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
@@ -3597,10 +3597,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "rgbmatrix/graphics.pyx":46
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))
- * 
+ *
  * def DrawCircle(core.Canvas c, int x, int y, int r, Color color):             # <<<<<<<<<<<<<<
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
- * 
+ *
  */
   __pyx_tuple__7 = PyTuple_Pack(5, __pyx_n_s_c, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_r, __pyx_n_s_color); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(1, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
@@ -3609,10 +3609,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "rgbmatrix/graphics.pyx":49
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
- * 
+ *
  * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):             # <<<<<<<<<<<<<<
  *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color)
- * 
+ *
  */
   __pyx_tuple__9 = PyTuple_Pack(6, __pyx_n_s_c, __pyx_n_s_x1, __pyx_n_s_y1, __pyx_n_s_x2, __pyx_n_s_y2, __pyx_n_s_color); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(1, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
@@ -3946,10 +3946,10 @@ if (!__Pyx_RefNanny) {
 
   /* "rgbmatrix/graphics.pyx":43
  *         def __get__(self): return self.__font.baseline()
- * 
+ *
  * def DrawText(core.Canvas c, Font f, int x, int y, Color color, text):             # <<<<<<<<<<<<<<
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))
- * 
+ *
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9rgbmatrix_8graphics_1DrawText, NULL, __pyx_n_s_rgbmatrix_graphics); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -3958,10 +3958,10 @@ if (!__Pyx_RefNanny) {
 
   /* "rgbmatrix/graphics.pyx":46
  *     return cppinc.DrawText(c.__getCanvas(), f.__font, x, y, color.__color, text.encode('utf-8'))
- * 
+ *
  * def DrawCircle(core.Canvas c, int x, int y, int r, Color color):             # <<<<<<<<<<<<<<
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
- * 
+ *
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9rgbmatrix_8graphics_3DrawCircle, NULL, __pyx_n_s_rgbmatrix_graphics); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -3970,10 +3970,10 @@ if (!__Pyx_RefNanny) {
 
   /* "rgbmatrix/graphics.pyx":49
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
- * 
+ *
  * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):             # <<<<<<<<<<<<<<
  *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color)
- * 
+ *
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9rgbmatrix_8graphics_5DrawLine, NULL, __pyx_n_s_rgbmatrix_graphics); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -3982,7 +3982,7 @@ if (!__Pyx_RefNanny) {
 
   /* "rgbmatrix/graphics.pyx":1
  * # distutils: language = c++             # <<<<<<<<<<<<<<
- * 
+ *
  * from libcpp cimport bool
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 1, __pyx_L1_error)
