@@ -7,7 +7,7 @@ namespace minimal_example
         static int Main(string[] args)
         {
 
-            var matrix= new RGBLedMatrix(32, 2, 1);           
+            var matrix= new RGBLedMatrix(32, 2, 1);
             var canvas = matrix.CreateOffscreenCanvas();
 
             for (var i = 0; i < 1000; ++i)
@@ -20,13 +20,13 @@ namespace minimal_example
                     }
                 }
                 canvas.DrawCircle(canvas.Width / 2, canvas.Height / 2, 6, new Color(0, 0, 255));
-                canvas.DrawLine(canvas.Width / 2 - 3, canvas.Height / 2 - 3, canvas.Width / 2 + 3, canvas.Height / 2 + 3, new Color(0, 0, 255));
-                canvas.DrawLine(canvas.Width / 2 - 3, canvas.Height / 2 + 3, canvas.Width / 2 + 3, canvas.Height / 2 - 3, new Color(0, 0, 255));
+                canvas.DrawLine(canvas.Width / 2 - 3, canvas.Height / 2 - 3, canvas.Width / 2 + 3, canvas.Height / 2 + 3, 0, new Color(0, 0, 255));
+                canvas.DrawLine(canvas.Width / 2 - 3, canvas.Height / 2 + 3, canvas.Width / 2 + 3, canvas.Height / 2 - 3, 0, new Color(0, 0, 255));
 
                 canvas = matrix.SwapOnVsync(canvas);
             }
 
-            return 0; 
+            return 0;
         }
     }
 }

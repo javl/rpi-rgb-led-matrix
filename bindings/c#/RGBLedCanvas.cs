@@ -68,9 +68,9 @@ namespace rpi_rgb_led_matrix_sharp
             draw_circle(_canvas, x0, y0, radius, color.R, color.G, color.B);
         }
 
-        public void DrawLine (int x0, int y0, int x1, int y1, Color color, int side)
+        public void DrawLine (int x0, int y0, int x1, int y1, int side, Color color)
         {
-            draw_line(_canvas, x0, y0, x1, y1, color.R, color.G, color.B, side);
+            draw_line(_canvas, x0, y0, x1, y1, side, color.R, color.G, color.B);
         }
 
         public int DrawText(RGBLedFont font, int x, int y, Color color, string text, int spacing=0, bool vertical=false)

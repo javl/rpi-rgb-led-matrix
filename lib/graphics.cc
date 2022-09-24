@@ -140,7 +140,7 @@ void DrawCircle(Canvas *c, int x0, int y0, int radius, const Color &color) {
   }
 }
 
-void DrawLine(Canvas *c, int x0, int y0, int x1, int y1, const Color &color, int side) {
+void DrawLine(Canvas *c, int x0, int y0, int x1, int y1, int side, const Color &color) {
   int dy = y1 - y0, dx = x1 - x0, gradient, x, y, shift = 0x10;
 
   if (abs(dx) > abs(dy)) {

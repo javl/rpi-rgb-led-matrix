@@ -137,7 +137,7 @@ int VerticalDrawText(Canvas *c, const Font &font, int x, int y,
 void DrawCircle(Canvas *c, int x, int y, int radius, const Color &color);
 
 // Draw a line from "x0", "y0" to "x1", "y1" and with "color"
-void DrawLine(Canvas *c, int x0, int y0, int x1, int y1, const Color &color, int side);
+void DrawLine(Canvas *c, int x0, int y0, int x1, int y1, int side, const Color &color);
 
 }  // namespace rgb_matrix
 
