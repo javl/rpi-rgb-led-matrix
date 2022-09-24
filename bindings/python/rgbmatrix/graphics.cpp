@@ -1534,6 +1534,7 @@ static PyObject *__pyx_n_s_y;
 static PyObject *__pyx_n_s_y1;
 static PyObject *__pyx_n_s_y2;
 static int __pyx_pf_9rgbmatrix_8graphics_5Color___init__(struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_self, uint8_t __pyx_v_red, uint8_t __pyx_v_green, uint8_t __pyx_v_blue); /* proto */
+static PyObject *__pyx_n_s_side;
 static PyObject *__pyx_pf_9rgbmatrix_8graphics_5Color_3red___get__(struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_self); /* proto */
 static int __pyx_pf_9rgbmatrix_8graphics_5Color_3red_2__set__(struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_self, uint8_t __pyx_v_value); /* proto */
 static PyObject *__pyx_pf_9rgbmatrix_8graphics_5Color_5green___get__(struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_self); /* proto */
@@ -1551,7 +1552,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_6__reduce_cython__(CYTHON_U
 static PyObject *__pyx_pf_9rgbmatrix_8graphics_4Font_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9rgbmatrix_8graphics_Font *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_9rgbmatrix_8graphics_DrawText(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_9rgbmatrix_4core_Canvas *__pyx_v_c, struct __pyx_obj_9rgbmatrix_8graphics_Font *__pyx_v_f, int __pyx_v_x, int __pyx_v_y, struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_color, PyObject *__pyx_v_text); /* proto */
 static PyObject *__pyx_pf_9rgbmatrix_8graphics_2DrawCircle(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_9rgbmatrix_4core_Canvas *__pyx_v_c, int __pyx_v_x, int __pyx_v_y, int __pyx_v_r, struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_color); /* proto */
-static PyObject *__pyx_pf_9rgbmatrix_8graphics_4DrawLine(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_9rgbmatrix_4core_Canvas *__pyx_v_c, int __pyx_v_x1, int __pyx_v_y1, int __pyx_v_x2, int __pyx_v_y2, struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_color); /* proto */
+static PyObject *__pyx_pf_9rgbmatrix_8graphics_4DrawLine(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_9rgbmatrix_4core_Canvas *__pyx_v_c, int __pyx_v_x1, int __pyx_v_y1, int __pyx_v_x2, int __pyx_v_y2, struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_color, int __pyx_v_side); /* proto */
 static PyObject *__pyx_tp_new_9rgbmatrix_8graphics_Color(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_9rgbmatrix_8graphics_Font(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tuple_;
@@ -2983,7 +2984,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_2DrawCircle(CYTHON_UNUSED PyObjec
  * def DrawCircle(core.Canvas c, int x, int y, int r, Color color):
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)             # <<<<<<<<<<<<<<
  *
- * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):
+ * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color, int side):
  */
   try {
     __pyx_t_1 = ((struct __pyx_vtabstruct_9rgbmatrix_4core_Canvas *)__pyx_v_c->__pyx_vtab)->__pyx___getCanvas(__pyx_v_c);
@@ -3016,8 +3017,8 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_2DrawCircle(CYTHON_UNUSED PyObjec
 /* "rgbmatrix/graphics.pyx":49
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
  *
- * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):             # <<<<<<<<<<<<<<
- *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color)
+ * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color, int side):             # <<<<<<<<<<<<<<
+ *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color, side)
  *
  */
 
@@ -3031,6 +3032,7 @@ static PyObject *__pyx_pw_9rgbmatrix_8graphics_5DrawLine(PyObject *__pyx_self, P
   int __pyx_v_x2;
   int __pyx_v_y2;
   struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_color = 0;
+  int __pyx_v_side;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -3038,12 +3040,14 @@ static PyObject *__pyx_pw_9rgbmatrix_8graphics_5DrawLine(PyObject *__pyx_self, P
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("DrawLine (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_c,&__pyx_n_s_x1,&__pyx_n_s_y1,&__pyx_n_s_x2,&__pyx_n_s_y2,&__pyx_n_s_color,0};
-    PyObject* values[6] = {0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_c,&__pyx_n_s_x1,&__pyx_n_s_y1,&__pyx_n_s_x2,&__pyx_n_s_y2,&__pyx_n_s_color,&__pyx_n_s_side,0};
+    PyObject* values[7] = {0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
+        case  7: values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
+        CYTHON_FALLTHROUGH;
         case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
         CYTHON_FALLTHROUGH;
         case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
@@ -3068,37 +3072,43 @@ static PyObject *__pyx_pw_9rgbmatrix_8graphics_5DrawLine(PyObject *__pyx_self, P
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_x1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 6, 6, 1); __PYX_ERR(1, 49, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 7, 7, 1); __PYX_ERR(1, 49, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_y1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 6, 6, 2); __PYX_ERR(1, 49, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 7, 7, 2); __PYX_ERR(1, 49, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_x2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 6, 6, 3); __PYX_ERR(1, 49, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 7, 7, 3); __PYX_ERR(1, 49, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_y2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 6, 6, 4); __PYX_ERR(1, 49, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 7, 7, 4); __PYX_ERR(1, 49, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_color)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 6, 6, 5); __PYX_ERR(1, 49, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 7, 7, 5); __PYX_ERR(1, 49, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  6:
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_side)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 7, 7, 4); __PYX_ERR(1, 49, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "DrawLine") < 0)) __PYX_ERR(1, 49, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 6) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 7) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -3107,6 +3117,7 @@ static PyObject *__pyx_pw_9rgbmatrix_8graphics_5DrawLine(PyObject *__pyx_self, P
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
       values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
       values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
+      values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
     }
     __pyx_v_c = ((struct __pyx_obj_9rgbmatrix_4core_Canvas *)values[0]);
     __pyx_v_x1 = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_x1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 49, __pyx_L3_error)
@@ -3114,10 +3125,11 @@ static PyObject *__pyx_pw_9rgbmatrix_8graphics_5DrawLine(PyObject *__pyx_self, P
     __pyx_v_x2 = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_x2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 49, __pyx_L3_error)
     __pyx_v_y2 = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_y2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 49, __pyx_L3_error)
     __pyx_v_color = ((struct __pyx_obj_9rgbmatrix_8graphics_Color *)values[5]);
+    __pyx_v_side = __Pyx_PyInt_As_int(values[6]); if (unlikely((__pyx_v_side == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 49, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 49, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("DrawLine", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 49, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("rgbmatrix.graphics.DrawLine", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3125,7 +3137,7 @@ static PyObject *__pyx_pw_9rgbmatrix_8graphics_5DrawLine(PyObject *__pyx_self, P
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_c), __pyx_ptype_9rgbmatrix_4core_Canvas, 1, "c", 0))) __PYX_ERR(1, 49, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_color), __pyx_ptype_9rgbmatrix_8graphics_Color, 1, "color", 0))) __PYX_ERR(1, 49, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9rgbmatrix_8graphics_4DrawLine(__pyx_self, __pyx_v_c, __pyx_v_x1, __pyx_v_y1, __pyx_v_x2, __pyx_v_y2, __pyx_v_color);
+  __pyx_r = __pyx_pf_9rgbmatrix_8graphics_4DrawLine(__pyx_self, __pyx_v_c, __pyx_v_x1, __pyx_v_y1, __pyx_v_x2, __pyx_v_y2, __pyx_v_color, __pyx_v_side);
 
   /* function exit code */
   goto __pyx_L0;
@@ -3136,7 +3148,7 @@ static PyObject *__pyx_pw_9rgbmatrix_8graphics_5DrawLine(PyObject *__pyx_self, P
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9rgbmatrix_8graphics_4DrawLine(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_9rgbmatrix_4core_Canvas *__pyx_v_c, int __pyx_v_x1, int __pyx_v_y1, int __pyx_v_x2, int __pyx_v_y2, struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_color) {
+static PyObject *__pyx_pf_9rgbmatrix_8graphics_4DrawLine(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_9rgbmatrix_4core_Canvas *__pyx_v_c, int __pyx_v_x1, int __pyx_v_y1, int __pyx_v_x2, int __pyx_v_y2, struct __pyx_obj_9rgbmatrix_8graphics_Color *__pyx_v_color, int __pyx_v_side) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   rgb_matrix::Canvas *__pyx_t_1;
@@ -3158,7 +3170,7 @@ static PyObject *__pyx_pf_9rgbmatrix_8graphics_4DrawLine(CYTHON_UNUSED PyObject 
     __Pyx_CppExn2PyErr();
     __PYX_ERR(1, 50, __pyx_L1_error)
   }
-  rgb_matrix::DrawLine(__pyx_t_1, __pyx_v_x1, __pyx_v_y1, __pyx_v_x2, __pyx_v_y2, __pyx_v_color->__pyx___color);
+  rgb_matrix::DrawLine(__pyx_t_1, __pyx_v_x1, __pyx_v_y1, __pyx_v_x2, __pyx_v_y2, __pyx_v_color->__pyx___color, __pyx_v_side);
 
   /* "rgbmatrix/graphics.pyx":49
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
@@ -3610,14 +3622,14 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "rgbmatrix/graphics.pyx":49
  *     cppinc.DrawCircle(c.__getCanvas(), x, y, r, color.__color)
  *
- * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color):             # <<<<<<<<<<<<<<
- *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color)
+ * def DrawLine(core.Canvas c, int x1, int y1, int x2, int y2, Color color, side):             # <<<<<<<<<<<<<<
+ *     cppinc.DrawLine(c.__getCanvas(), x1, y1, x2, y2, color.__color, side)
  *
  */
-  __pyx_tuple__9 = PyTuple_Pack(6, __pyx_n_s_c, __pyx_n_s_x1, __pyx_n_s_y1, __pyx_n_s_x2, __pyx_n_s_y2, __pyx_n_s_color); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(1, 49, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(7, __pyx_n_s_c, __pyx_n_s_x1, __pyx_n_s_y1, __pyx_n_s_x2, __pyx_n_s_y2, __pyx_n_s_color, __pyx_n_s_side); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(1, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(6, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_graphics_pyx, __pyx_n_s_DrawLine, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(1, 49, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(7, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_graphics_pyx, __pyx_n_s_DrawLine, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(1, 49, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
